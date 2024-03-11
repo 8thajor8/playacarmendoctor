@@ -155,17 +155,19 @@ body{
     display: flex;
     
     .parallax__container{
-        height: 150%; /* Adjusted height */
+        height: 100%; /* Adjusted height */
         position: absolute;
         z-index: 0;
         right: 0;
         left: 0;
         top: 0;
         background-image: url('../assets/banner2.jpg');
+        
         background-color: transparent;
         background-size: cover;
         background-attachment: fixed; 
         background-repeat: no-repeat;
+        transition: transform 0.01s ease;
         
     }
     .banner__container{
@@ -495,18 +497,41 @@ body{
                     margin: 20px 0px;
                     padding: 5px 10px;
                     width: 100%;
-                    
+                    .background-image {
+                        opacity: 1;
+                    }
+                    .overlay{
+                        visibility: visible;
+                        opacity: 1;
+                        background-color: rgba(0, 0, 0, 0.6);
+                        
+                    }
+                    .description {
+                        visibility: visible;
+                        opacity: 1;
+                        
+                    }
+            
+                   
                     .contact__icon{
                         margin-top: 20px;
+                        position: relative;
+                        z-index: 2;
+
                     }    
                     .contact__title{
                         font-size: 1.8rem;
                     }
                     h3{
                         font-size: 1.4rem;
+                        color: $aqua;
                     }
                     p{
                         font-size: 1.2rem;
+                    }
+                    a{
+                        color: $aqua;
+                        font-weight: 500;
                     }
                 }
             }
